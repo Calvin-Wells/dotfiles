@@ -5,21 +5,25 @@ SCRIPTPATH="$(dirname $SCRIPT)"
 
 mkdir "$SCRIPTPATH/backup"
 
-mv "$HOME/.bashrc" "$SCRIPTPATH/backup/"
+cp "$HOME/.bashrc" "$SCRIPTPATH/backup/"
 ln -sf "$SCRIPTPATH/.bashrc" "$HOME/.bashrc"
 
-mv "$HOME/.bash_profile" "$SCRIPTPATH/backup/"
+cp "$HOME/.bash_profile" "$SCRIPTPATH/backup/"
 ln -sf "$SCRIPTPATH/.bash_profile" "$HOME/.bash_profile"
 
-mv "$HOME/.profile" "$SCRIPTPATH/backup/"
+cp "$HOME/.profile" "$SCRIPTPATH/backup/"
 ln -sf "$SCRIPTPATH/.profile" "$HOME/.profile"
 
-mv "$HOME/.vimrc" "$SCRIPTPATH/backup/"
+cp "$HOME/.vimrc" "$SCRIPTPATH/backup/"
 ln -sf "$SCRIPTPATH/.vimrc" "$HOME/.vimrc"
 
 if [[ -d "$HOME/.config/i3" ]]; then
-    mv "$HOME/.config/i3/config" "$SCRIPTPATH/backup/"
+    cp "$HOME/.config/i3/config" "$SCRIPTPATH/backup/"
     ln -sf "$SCRIPTPATH/config" "$HOME/.config/i3/config"
+
+    mv "$HOME/.config/i3blocks" "$SCRIPTPATH/backup/"
+    ln -sf "$SCRPITPATH/i3blocks/" "$HOME/.config/i3blocks"
+    
 fi
 
 echo "All set up"

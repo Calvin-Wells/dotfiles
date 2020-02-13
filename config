@@ -3,9 +3,9 @@
 # Some declarations at the start
 set $mod Mod4
 # Programs that will be later used
-set $terminal konsole
+set $terminal uxterm
 set $internet firefox
-set $files dolphin
+set $files pcmanfm
 set $email thunderbird
 set $office libreoffice
 set $music spotify
@@ -17,7 +17,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # Default font
-font pango: Noto Sans 9
+font pango: Fixed 10
 
 
 ## Launching programs ##
@@ -208,14 +208,13 @@ for_window [class="plasmashell" window_type="notification"] floating enable, bor
 ### STANDALONE I3 STUFF ###
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#	status_command	i3blocks
-#}
+bar {
+	status_command	i3blocks
+}
 
 # Execute some startup applications
 exec --no-startup-id bash ~/.fehbg
-#exec --no-startup-id blueman-applet
-#exec --no-startup-id pasystray
-#exec --no-startup-id xss-lock -- i3lock -ec 000000
-#exec --no-startup-id pcmanfm -d
-#exec --no-startup-id xrandr --output HDMI-A-0 --right-of DisplayPort-0 --rotate right
+exec --no-startup-id blueman-applet
+exec --no-startup-id pasystray
+exec --no-startup-id xss-lock -- i3lock -ec 000000
+exec --no-startup-id pcmanfm -d
