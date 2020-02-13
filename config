@@ -17,7 +17,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # Default font
-font pango: Fixed 10
+font : 7x13
 
 
 ## Launching programs ##
