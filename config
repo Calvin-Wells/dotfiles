@@ -149,6 +149,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
+# toggle bar
+bindsym $mod+b bar mode toggle
+
 # Resize controls
 bindsym $mod+control+h resize shrink width 10 px or 10 ppt
 bindsym $mod+control+j resize grow height 10 px or 10 ppt
