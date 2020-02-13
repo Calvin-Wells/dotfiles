@@ -4,7 +4,8 @@ set autochdir
 set autoindent
 filetype plugin indent on
 
-set nu rnu
+set number
+set relativenumber
 
 augroup numbertoggle
 	autocmd!
