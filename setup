@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+
+SCRIPT="realpath $0"
+SCRIPTPATH="dirname $SCRIPT"
+
+ln -sf "$SCRIPTPATH/.bashrc" "$HOME/.bashrc"
+ln -sf "$SCRIPTPATH/.bash_profile" "$HOME/.bash_profile"
+ln -sf "$SCRIPTPATH/.profile" "$HOME/.profile"
+ln -sf "$SCRIPTPATH/.vimrc" "$HOME/.vimrc"
+if [[ -d "$HOME/.config/i3" ]]; then
+    ln -sf "$SCRIPTPATH/config" "$HOME/.config/i3/config"
+fi
+
+echo "All set up"
