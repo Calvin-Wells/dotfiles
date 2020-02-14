@@ -1,3 +1,4 @@
+" Barebones config. Moved to nvim now
 set encoding=utf-8
 set autochdir
 

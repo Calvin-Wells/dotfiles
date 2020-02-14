@@ -26,9 +26,15 @@ if [[ -d "$HOME/.config/i3" ]]; then
     cp "$HOME/.config/i3/config" "$SCRIPTPATH/backup/"
     ln -sf "$SCRIPTPATH/config" "$HOME/.config/i3/config"
 
-    mv "$HOME/.config/i3blocks" "$SCRIPTPATH/backup/"
+    cp "$HOME/.config/i3blocks" "$SCRIPTPATH/backup/"
+    rm "$HOME/.config/i3blocks"
     ln -sf "$SCRPITPATH/i3blocks/" "$HOME/.config/i3blocks"
 
 fi
+
+cp "$HOME/.config/nvim" "$SCRIPTPATH/backup/"
+rm "$HOME/.config/nvim"
+ln -sf "$SCRIPTPATH/nvim/" "$HOME/.config/nvim"
+
 
 echo "All set up"
