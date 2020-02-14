@@ -3,7 +3,7 @@
 SCRIPT="$(realpath $0)"
 SCRIPTPATH="$(dirname $SCRIPT)"
 
-if [[ ! -d "$SCRIPTPATH/backup" ]] then
+if [[ ! -d "$SCRIPTPATH/backup" ]]; then
     mkdir "$SCRIPTPATH/backup"
 fi
 
