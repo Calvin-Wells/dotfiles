@@ -1,0 +1,74 @@
+! General config
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! XTerm stuff
+UXTerm*reverseVideo: false
+UXTerm*borderColor: black
+
+UXTerm*font: 7x13
+UXTerm*boldfont: 7x13bold
+
+UXTerm.termName: xterm-256color
+UXTerm.vt100.bellIsUrgent: true
+
+UXTerm*eightBitInput: false
+UXTerm*eightBitOutput: true
+
+XTerm*vt100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+
+
+! URxvt things
+URxvt.depth:                      32
+URxvt*scrollBar:                  false
+URxvt*mouseWheelScrollPage:       false
+URxvt*cursorBlink:                true
+URxvt*saveLines:                  5000
+
+URxvt.font: 7x13
+URxvt.boldfont: 7x13bold
+
+
+! Normal copy-paste keybindings without perls
+URxvt.iso14755:                   false
+URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard
+
+!Xterm escape codes, word by word movement
+URxvt.keysym.Control-Left:        \033[1;5D
+URxvt.keysym.Shift-Control-Left:  \033[1;6D
+URxvt.keysym.Control-Right:       \033[1;5C
+URxvt.keysym.Shift-Control-Right: \033[1;6C
+URxvt.keysym.Control-Up:          \033[1;5A
+URxvt.keysym.Shift-Control-Up:    \033[1;6A
+URxvt.keysym.Control-Down:        \033[1;5B
+URxvt.keysym.Shift-Control-Down:  \033[1;6B
+
+! Colours
+*background:		#282f39
+*foreground:		#d1d3d8
+
+*color0:      		#1a2227
+*color1:      		#cc575d
+*color2:      		#51e158
+*color3:      		#dae151
+*color4:      		#1b559d
+*color5:      		#8c57cb
+*color6:      		#5294e2
+*color7:      		#d1d3d8
+
+*color8:      		#373d48
+*color9:      		#dd9296
+*color10:     		#91ed96
+*color11:     		#e9ed91
+*color12:     		#2879dc
+*color13:     		#b492dd
+*color14:     		#92bbed
+*color15:     		#ffffff
