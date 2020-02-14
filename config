@@ -17,7 +17,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # Default font
-font : 7x13
+font: fixed 10
 
 
 ## Launching programs ##
@@ -249,9 +249,23 @@ client.urgent           $border-color-urgent           $background-color-urgent 
 client.placeholder      $border-color-placeholder      $background-color-placeholder      $text-color-placeholder      #CC575D
 client.background       $border-color-background       $background-color-background       $text-color-background       #CC575D
 
+### GAPS ONLY CONFIG ###
+default_border pixel 1
+default_floating_border normal
+
+gaps inner 10
+gaps outer 0
+
+smart_gaps on
+
+# Keybinds to turn gaps on and off
+bindsym $mod+t gaps inner all set 0
+bindsym $mod+y gaps inner all set 10
+
 # Execute some startup applications
 exec --no-startup-id bash ~/.fehbg
 exec --no-startup-id blueman-applet
+exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 exec --no-startup-id xss-lock -- i3lock -ec 000000
 exec --no-startup-id pcmanfm -d
