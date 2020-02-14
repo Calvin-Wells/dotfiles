@@ -76,3 +76,6 @@ shopt -s expand_aliases
 shopt -s histappend
 
 source /usr/share/fzf/key-bindings.bash
+
+# Set qt5 styling
+export QT_QPA_PLATFORMTHEME=qt5ct

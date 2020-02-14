@@ -43,7 +43,7 @@ set smartcase
 set incsearch
 set path+=**
 set wildmenu
-set wildmode=longest:full,full
+set wildmode=full
 
 " always show statusbar
 set laststatus=2
