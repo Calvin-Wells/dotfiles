@@ -199,8 +199,55 @@ bindsym $mod+g mode $launch
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	status_command	i3blocks
+    status_command	i3blocks
+
+        colors {
+            background         $background-color-background
+                statusline         $text-color-focused
+                separator          $border-color-unfocused
+                                    #border                         background                         text
+                focused_workspace  $border-color-focused          $background-color-focused          $text-color-focused
+                active_workspace   $border-color-focused_inactive $background-color-focused_inactive $text-color-focused_inactive
+                inactive_workspace $border-color-unfocused        $background-color-unfocused        $text-color-unfocused
+                urgent_workspace   $border-color-urgent           $background-color-urgent           $text-color-urgent
+                binding_mode       $border-color-urgent           $background-color-urgent           $text-color-urgent
+        }
 }
+# color variables for bar and windows
+# (colors below are as follows: 
+# 282F39 - Title bar from ARC 
+# LA2227 - Border from ARC 
+# 373D48 - Side bar from ARC 
+# 5294E2 - Active from ARC 
+# D1D3D8 - Alternative Side bar (white) from ARC 
+# CC575D - Urgent From ARC 
+
+        set $border-color-focused              #5294E2
+        set $border-color-focused_inactive     #D1D3D8
+        set $border-color-unfocused            #LA2227
+        set $border-color-urgent               #CC575D
+        set $border-color-placeholder          #00FF00
+        set $border-color-background           #282f39
+        set $background-color-focused          #5294E2
+        set $background-color-focused_inactive #D1D3D8
+        set $background-color-unfocused        #LA2227
+        set $background-color-urgent           #CC575D
+        set $background-color-placeholder      #00FF00 
+        set $background-color-background       #282f39
+        set $text-color-focused                #FFFFFF
+set $text-color-focused_inactive       #FFFFFF
+set $text-color-unfocused              #282f39
+set $text-color-urgent                 #FFFFFF
+set $text-color-placeholder            #FFFFFF
+set $text-color-background             #FFFFFF
+
+#                       border                         background                         text                         indicator
+client.focused          $border-color-focused          $background-color-focused          $text-color-focused          #CC575D
+client.focused_inactive $border-color-focused_inactive $background-color-focused_inactive $text-color-focused_inactive #CC575D
+client.unfocused        $border-color-unfocused        $background-color-unfocused        $text-color-unfocused        #CC575D
+client.urgent           $border-color-urgent           $background-color-urgent           $text-color-urgent           #CC575D
+client.placeholder      $border-color-placeholder      $background-color-placeholder      $text-color-placeholder      #CC575D
+client.background       $border-color-background       $background-color-background       $text-color-background       #CC575D
 
 # Execute some startup applications
 exec --no-startup-id bash ~/.fehbg
