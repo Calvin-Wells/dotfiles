@@ -23,17 +23,17 @@ cp "$HOME/.Xresources" "$SCRIPTPATH/backup/"
 ln -sf "$SCRIPTPATH/.Xresources" "$HOME/.Xresources"
 
 if [[ -d "$HOME/.config/i3" ]]; then
-    cp "$HOME/.config/i3/config" "$SCRIPTPATH/backup/"
+    cp -r "$HOME/.config/i3/config" "$SCRIPTPATH/backup/"
     ln -sf "$SCRIPTPATH/config" "$HOME/.config/i3/config"
 
-    cp "$HOME/.config/i3blocks" "$SCRIPTPATH/backup/"
-    rm "$HOME/.config/i3blocks"
+    cp -r "$HOME/.config/i3blocks" "$SCRIPTPATH/backup/"
+    rm -r "$HOME/.config/i3blocks"
     ln -sf "$SCRPITPATH/i3blocks/" "$HOME/.config/i3blocks"
 
 fi
 
-cp "$HOME/.config/nvim" "$SCRIPTPATH/backup/"
-rm "$HOME/.config/nvim"
+cp -r "$HOME/.config/nvim" "$SCRIPTPATH/backup/"
+rm -r "$HOME/.config/nvim"
 ln -sf "$SCRIPTPATH/nvim/" "$HOME/.config/nvim"
 
 
