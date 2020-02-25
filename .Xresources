@@ -9,7 +9,7 @@ Xft.lcdfilter: lcddefault
 
 ! XTerm stuff
 UXTerm*reverseVideo: false
-UXTerm*borderColor: black
+UXTerm*borderColor: #282f39
 
 UXTerm*font: 7x13
 UXTerm*boldfont: 7x13bold
