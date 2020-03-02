@@ -124,7 +124,7 @@ interval=30
 # Date Time
 #
 [time]
-command=date '+%a %b %e %l:%M%P '
+command=date '+%a %b%e%l:%M%P '
 interval=5
 separator=true
 
