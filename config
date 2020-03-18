@@ -5,7 +5,7 @@ set $mod Mod4
 # Programs that will be later used
 set $terminal uxterm
 set $internet firefox
-set $files pcmanfm
+set $files pcmanfm-qt
 set $email thunderbird
 set $office libreoffice
 set $music spotify
