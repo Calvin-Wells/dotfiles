@@ -268,5 +268,6 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 exec --no-startup-id xss-lock -- i3lock -ec 000000
-exec --no-startup-id pcmanfm -d
+exec --no-startup-id pcmanfm-qt -d
 exec --no-startup-id compton
+exec --no-startup-id lxqt-notificationd
