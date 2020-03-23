@@ -271,3 +271,5 @@ exec --no-startup-id xss-lock -- i3lock -ec 000000
 exec --no-startup-id pcmanfm-qt -d
 exec --no-startup-id compton
 exec --no-startup-id lxqt-notificationd
+exec --no-startup-id kdeconnect-app
+exec --no-startup-id kdeconnect-indicator
