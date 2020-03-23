@@ -79,7 +79,7 @@ shopt -s histappend
 source /usr/share/fzf/key-bindings.bash
 
 # Enable autojump
-source /usr/share/autojump/autojump.sh
+source /usr/share/autojump/autojump.bash
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
