@@ -250,13 +250,13 @@ client.placeholder      $border-color-placeholder      $background-color-placeho
 client.background       $border-color-background       $background-color-background       $text-color-background       #CC575D
 
 ### GAPS ONLY CONFIG ###
-default_border pixel 1
-default_floating_border normal
-
-gaps inner 10
-gaps outer 0
-
-smart_gaps on
+# default_border pixel 1
+# default_floating_border normal
+# 
+# gaps inner 10
+# gaps outer 0
+# 
+# smart_gaps on
 
 # Keybinds to turn gaps on and off
 bindsym $mod+t gaps inner all set 0
