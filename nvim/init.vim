@@ -56,6 +56,9 @@ set splitright
 set colorcolumn=120
 highlight ColorColumn ctermbg=8 guibg=lightgrey
 
+" GUI Things
+" load nvim-qt plugin
+set runtimepath+=,/usr/share/nvim-qt/runtime
 " Plugin things
 " Keeping everything in the .config dir
 set runtimepath^=~/.config/nvim/site
