@@ -11,8 +11,10 @@ Xft.lcdfilter: lcddefault
 UXTerm*reverseVideo: false
 UXTerm*borderColor: #282f39
 
-UXTerm*font: 7x13
-UXTerm*boldfont: 7x13bold
+!UXTerm*font: 7x13
+!UXTerm*boldfont: 7x13bold
+!
+UXTerm.vt100.faceName: Bitstream Vera Sans Mono:size=9
 
 UXTerm.termName: xterm-256color
 UXTerm.vt100.bellIsUrgent: true

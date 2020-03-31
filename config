@@ -17,7 +17,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # Default font
-font: fixed 10
+font pango: Bitstream Vera Sans 8
 
 
 ## Launching programs ##
