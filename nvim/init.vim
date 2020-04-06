@@ -50,6 +50,12 @@ set splitright
 set colorcolumn=120
 highlight ColorColumn ctermbg=8 guibg=lightgrey
 
+" Terminal things
+" rebind <Esc> to exit in terminal mode
+:tnoremap <Esc> <C-\><C-n>
+" rebind <C-t><C-t> to open terminal in a split
+:noremap <C-t><C-t> :split<CR>:terminal<CR>
+
 " GUI Things
 " load nvim-qt plugin
 set runtimepath+=,/usr/share/nvim-qt/runtime
