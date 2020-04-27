@@ -62,6 +62,9 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+# alias nvim to nim
+alias nim='nvim'
+
 # Bash won't get SIGWINCH if another process is in the foreground.
 # Enable checkwinsize so that bash will check the terminal size when
 # it regains control.  #65623
@@ -77,6 +80,8 @@ shopt -s histappend
 
 # Use fzf for searches
 source /usr/share/fzf/key-bindings.bash
+# Set default fzf command to include hidden files
+export FZF_DEFAULT_COMMAND='find .'
 
 # Enable autojump
 source /usr/share/autojump/autojump.bash

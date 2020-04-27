@@ -52,13 +52,10 @@ highlight ColorColumn ctermbg=8 guibg=lightgrey
 
 " Terminal things
 " rebind <Esc> to exit in terminal mode
-:tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
 " rebind <C-t><C-t> to open terminal in a split
-:noremap <C-t><C-t> :split<CR>:terminal<CR>
+noremap <C-t><C-t> :split<CR>:terminal<CR>
 
-" GUI Things
-" load nvim-qt plugin
-set runtimepath+=,/usr/share/nvim-qt/runtime
 " Plugin things
 " Keeping everything in the .config dir
 set runtimepath^=~/.config/nvim/site
@@ -69,7 +66,8 @@ call plug#begin('~/.config/nvim/plug')
 
 " List to install
 Plug 'lambdalisue/suda.vim'
-Plug 'easymotion/vim-easymotion'
+Plug 'mhinz/vim-startify'
+Plug 'rakr/vim-one'
 
 " Plugins become visible after this
 call plug#end()
@@ -80,3 +78,7 @@ command W w suda://%
 
 " automatically use suda when opening a file w/o read/write permissions
 let g:suda_smart_edit = 1
+
+" Startify
+" save session data when I leave
+let g:startify_session_persistence=1
