@@ -96,6 +96,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Set qt5 styling
-export QT_QPA_PLATFORMTHEME=qt5ct
