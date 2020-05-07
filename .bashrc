@@ -79,20 +79,24 @@ shopt -s expand_aliases
 shopt -s histappend
 
 # Use fzf for searches
-source /usr/share/fzf/key-bindings.bash
-# Set default fzf command to include hidden files
-export FZF_DEFAULT_COMMAND='find .'
+if [ -f /usr/share/fzf ]; then
+   source /usr/share/fzf/key-bindings.bash
+   # Set default fzf command to include hidden files
+   export FZF_DEFAULT_COMMAND='find .'
+fi
 
 # Enable autojump
-source /usr/share/autojump/autojump.bash
+if [ -f /usr/share/autojump ]; then
+   source /usr/share/autojump/autojump.bash
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+   if [ -f /usr/share/bash-completion/bash_completion ]; then
+      . /usr/share/bash-completion/bash_completion
+   elif [ -f /etc/bash_completion ]; then
+      . /etc/bash_completion
+   fi
 fi

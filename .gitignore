@@ -1,3 +1,4 @@
 # Ignore backup files
 backup/
 nvim/plug/
+nvim/site/
