@@ -73,20 +73,18 @@ shopt -s checkwinsize
 
 shopt -s expand_aliases
 
-# export QT_SELECT=4
-
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
 # Use fzf for searches
-if [ -f /usr/share/fzf ]; then
+if [ -f /usr/share/fzf/key-bindings.bash ]; then
    source /usr/share/fzf/key-bindings.bash
    # Set default fzf command to include hidden files
    export FZF_DEFAULT_COMMAND='find .'
 fi
 
 # Enable autojump
-if [ -f /usr/share/autojump ]; then
+if [ -f /usr/share/autojump/autojump.bash ]; then
    source /usr/share/autojump/autojump.bash
 fi
 
