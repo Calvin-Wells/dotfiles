@@ -1,11 +1,5 @@
 ### BASICS ###
 #Completion options
-#zstyle ':completion:*' completer _expand _complete _ignored _approximate
-#zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
-#zstyle :compinstall filename '/home/calvin/.zshrc'
-#
-#autoload -Uz compinit
-#compinit
 autoload -Uz compinit
 zstyle ':completion:*' menu select # Use a menu for completion
 zstyle ':completion::complete:*' gain-privileges 1 # Autocomplete respects privilege
@@ -13,17 +7,21 @@ zmodload zsh/complist
 setopt COMPLETE_ALIASES # Complete command line switches for aliases
 compinit
 _comp_options+=(globdots)		# Include hidden files.
+
 #History
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
 #One liners
 setopt autocd extendedglob notify
 unsetopt beep
 bindkey -v
+
 #Colours
 export CLICOLOR=1
 autoload -U colors && colors
+
 # Colorize commands when possible.
 ls -hN --color=auto > /dev/null 2>&1 && alias \
   ls="ls -hN --color=auto --group-directories-first" \
@@ -34,6 +32,7 @@ ls -hN --color=auto > /dev/null 2>&1 && alias \
 ### VI MODE ###
 #Set 1ms timeout for faster mode switching
 export KEYTIMEOUT=1
+
 # Fix backspace in vi mode
 bindkey -v '^?' backward-delete-char
 
@@ -68,8 +67,10 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 ### PLUGINS ###
 # Using antigen as a plugin manager
 source /usr/share/zsh/share/antigen.zsh
+
 # Syntax hilighting
 antigen bundle zdharma/fast-syntax-highlighting
+
 # Spaceship prompt options:
 # https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md
 SPACESHIP_PROMPT_ORDER=(
@@ -101,7 +102,9 @@ SPACESHIP_HOST_SHOW=true              # 'always' if you want hostname outside of
 SPACESHIP_VI_MODE_SHOW=false
 SPACESHIP_PROMPT_ADD_NEWLINE=true
 SPACESHIP_PROMPT_SEPARATE_LINE=true
+
 # Actually load spaceship
 antigen theme denysdovhan/spaceship-prompt
+
 # Tell antigen we're done
 antigen apply
