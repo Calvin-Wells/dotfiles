@@ -26,8 +26,8 @@ cp "$HOME/.Xresources" "$SCRIPTPATH/backup/"
 ln -sf "$SCRIPTPATH/.Xresources" "$HOME/.Xresources"
 
 if [[ -d "$HOME/.config/i3" ]]; then
-    cp -r "$HOME/.config/i3/config" "$SCRIPTPATH/backup/"
-    ln -sf "$SCRIPTPATH/config" "$HOME/.config/i3/config"
+    cp -r "$HOME/.config/i3" "$SCRIPTPATH/backup/"
+    ln -sf "$SCRIPTPATH/i3" "$HOME/.config/i3"
 
     cp -r "$HOME/.config/i3blocks" "$SCRIPTPATH/backup/"
     rm -r "$HOME/.config/i3blocks"
