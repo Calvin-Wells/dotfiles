@@ -5,7 +5,7 @@ if [ -n "$BASH_VERSION" ]; then
 	fi
 fi
 
-#Include private bin in path if it exists
+# Include private bin in path if it exists
 if [ -d "$HOME/bin" ]; then
 	PATH="$HOME/bin:$PATH"
 fi
