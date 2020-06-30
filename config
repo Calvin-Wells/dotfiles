@@ -1,4 +1,4 @@
-#i2 config file (v4)
+#i3 config file (v4)
 
 # Some declarations at the start
 set $mod Mod4
