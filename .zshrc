@@ -29,6 +29,13 @@ ls -hN --color=auto > /dev/null 2>&1 && alias \
   diff="diff --color=auto" \
   ccat="highlight --out-format=ansi"
 
+# Set the terminal title to the working directory
+case $TERM in
+  xterm*)
+    precmd () {print -Pn "\e]0;%~\a"}
+    ;;
+esac
+
 ### VI MODE ###
 #Set 1ms timeout for faster mode switching
 export KEYTIMEOUT=1
