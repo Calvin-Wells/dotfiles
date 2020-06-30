@@ -99,8 +99,8 @@ SPACESHIP_GIT_PREFIX=''
 SPACESHIP_USER_SHOW=true              # 'always' if you want username outside of ssh
 SPACESHIP_HOST_SHOW=true              # 'always' if you want hostname outside of ssh
 SPACESHIP_VI_MODE_SHOW=false
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+SPACESHIP_PROMPT_SEPARATE_LINE=true
 # Actually load spaceship
 antigen theme denysdovhan/spaceship-prompt
 # Tell antigen we're done
