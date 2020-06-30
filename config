@@ -261,4 +261,4 @@ for_window [class="plasmashell" window_type="notification"] floating enable, bor
 no_focus [class="plasmashell" window_type="notification"] 
 
 exec --no-startup-id picom
-#exec --no-startup-id i3-monitor
+exec_always --no-startup-id i3-auto-layout
