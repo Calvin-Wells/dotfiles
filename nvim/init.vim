@@ -42,9 +42,6 @@ set path+=**
 set wildmenu
 set wildmode=full
 
-" scroll the screen before I reach the end
-set scrolloff=9999
-
 " always show statusbar
 set laststatus=2
 
