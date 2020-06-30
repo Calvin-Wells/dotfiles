@@ -274,6 +274,14 @@ bindsym XF86AudioLowerVolume exec --no-startup-id sounddown
 bindsym XF86MonBrightnessUp exec --no-startup-id brightup
 bindsym XF86MonBrightnessDown exec --no-startup-id brightdown
 
+# Passthrough mode
+set $passthrough "Passthrough mode, press Mod+F12 to leave"
+mode $passthrough
+{
+    bindsym $mod+F12 mode "default"
+}
+bindsym $mod+F12 mode $passthrough
+
 # Keybinds to turn gaps on and off
 bindsym $mod+t gaps inner all set 0 gaps outer all set 0
 bindsym $mod+y gaps inner all set 20 gaps outer all set 2
