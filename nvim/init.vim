@@ -24,6 +24,9 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Backspace through tabs
+set backspace=indent,eol,start
+
 " no errors
 set novisualbell
 set noerrorbells
@@ -49,9 +52,11 @@ set laststatus=2
 set splitbelow
 set splitright
 
-" colour column in row 120
-set colorcolumn=120
-highlight ColorColumn ctermbg=8 guibg=lightgrey
+" Remember last position in files
+autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
+
+" Set the title of terminals
+set title
 
 " Terminal things
 " rebind <Esc> to exit in terminal mode
@@ -71,6 +76,7 @@ call plug#begin('~/.config/nvim/plug')
 Plug 'lambdalisue/suda.vim'
 Plug 'mhinz/vim-startify'
 Plug 'rakr/vim-one'
+Plug 'peterhoeg/vim-qml'
 
 " Plugins become visible after this
 call plug#end()

@@ -41,10 +41,20 @@ markup=none
 # interval=30
 # signal=10
 
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+#[mediaplayer2]
+#instance=
+#interval=5
+#signal=10
+#separator=true
+
 # MPC connected media player
-[media]
-command=mpc | grep \-
-interval=30
+#[media]
+#command=if [[ $(mpc | grep playing) ]]; then mpc | grep \-; fi
+#interval=5
 
 # Memory usage
 #
@@ -65,10 +75,15 @@ interval=30
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
-#separator=true
+[temperature]
+label=CPU 
+interval=10
+separator=false
+
+[temperature --chip amdgpu-pci-2d00]
+label=GPU 
+interval=10
+separator=true
 
 # Disk usage
 #
@@ -90,14 +105,14 @@ color=#00FF00
 interval=10
 #separator=false
 
-[wifi]
+#[wifi]
 #instance=wlp3s0
-interval=10
+#interval=10
 #separator=false
 
-[bandwidth]
+#[bandwidth]
 ##instance=eth0
-interval=5
+#interval=5
 
 # CPU usage
 #
@@ -115,28 +130,18 @@ min_width=CPU: 100.00%
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery]
-label=Bat
+#[battery]
+#label=Bat
 #label=⚡
 #instance=1
-interval=30
+#interval=30
 
 # Date Time
 #
-[time]
-command=date '+%a %b %e %l:%M%P '
-interval=5
-separator=true
-
-# Generic media player support
-#
-# This displays "ARTIST - SONG" if a music is playing.
-# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
-[mediaplayer]
-instance=mpd
-interval=5
-signal=10
-separator=true
+#[time]
+#command=date '+%a %b %e %l:%M%P '
+#interval=5
+#separator=true
 
 # OpenVPN support
 #

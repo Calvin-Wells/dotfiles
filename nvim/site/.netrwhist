@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/calvin/.config/i3'
 let g:netrw_dirhist_8='/home/calvin/.local/share/plasma/desktoptheme/breeze-dark'
 let g:netrw_dirhist_7='/usr/share/plasma/desktoptheme/default'
 let g:netrw_dirhist_6='/home/calvin/.ncmpcpp'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_3='/home/calvin/Dropbox/Uni/yearTwo/semOne/ALG/lab5'
 let g:netrw_dirhist_2='/home/calvin/Dropbox/Uni/yearTwo/semOne/ALG/lab5/ALG-Lab05-FilesProvided'
 let g:netrw_dirhist_1='/home/calvin/Dropbox/Uni/yearTwo/semOne/ALG/lab5'
 let g:netrw_dirhist_0='/home/calvin/Dropbox/Uni/yearTwo/semOne/ALG/lab5/ALG-Lab05-FilesProvided'
-let g:netrw_dirhist_9='/home/calvin/Dropbox/Uni/yearTwo/semOne/ALG/lab5'

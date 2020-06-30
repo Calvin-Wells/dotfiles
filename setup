@@ -10,6 +10,9 @@ fi
 cp "$HOME/.bashrc" "$SCRIPTPATH/backup/"
 ln -sf "$SCRIPTPATH/.bashrc" "$HOME/.bashrc"
 
+cp "$HOME/.zshrc" "$SCRIPTPATH/backup/"
+ln -sf "$SCRIPTPATH/.zshrc" "$HOME/.zshrc"
+
 cp "$HOME/.bash_profile" "$SCRIPTPATH/backup/"
 ln -sf "$SCRIPTPATH/.bash_profile" "$HOME/.bash_profile"
 
