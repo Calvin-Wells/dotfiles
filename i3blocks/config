@@ -75,7 +75,7 @@ interval=30
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[temperature]
+[temperature --chip k10temp-pci-00c3]
 label=CPU 
 interval=10
 separator=false
