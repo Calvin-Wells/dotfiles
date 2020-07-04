@@ -21,13 +21,13 @@ focus_follows_mouse no
 hide_edge_borders smart
 
 # Gaps stuff
-default_border pixel 2
-default_floating_border normal
-
-gaps inner 20
-gaps outer 2
-
-smart_gaps on
+#default_border pixel 2
+#default_floating_border normal
+#
+#gaps inner 20
+#gaps outer 2
+#
+#smart_gaps on
 
 ### WORKSPACES ###
 #F workspaces are bound to Fn keys and used for second monitor
@@ -136,6 +136,9 @@ no_focus [class="plasmashell" window_type="notification"]
 ### APPEARANCE ###
 # Default font
 font pango: Noto Sans 9
+
+# Set all window borders to pixel 2
+for_window [class=".*"] border pixel 2
 
 # Set colour defenitions
 set $color-focused               #3DAEE9
@@ -283,8 +286,8 @@ mode $passthrough
 bindsym $mod+F12 mode $passthrough
 
 # Keybinds to turn gaps on and off
-bindsym $mod+t gaps inner all set 0 gaps outer all set 0
-bindsym $mod+y gaps inner all set 20 gaps outer all set 2
+#bindsym $mod+t gaps inner all set 0 gaps outer all set 0
+#bindsym $mod+y gaps inner all set 20 gaps outer all set 2
 
 ### LAUNCHING PROGRAMS ###
 bindsym $mod+Return exec $terminal
