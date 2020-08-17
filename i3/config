@@ -54,26 +54,26 @@ set $wsF9 "F9"
 set $wsF10 "F10"
 
 # Define workspaces for each monitor
-workspace "1" output DisplayPort-0
-workspace "2" output DisplayPort-0
-workspace "3" output DisplayPort-0
-workspace "4" output DisplayPort-0
-workspace "5" output DisplayPort-0
-workspace "6" output DisplayPort-0
-workspace "7" output DisplayPort-0
-workspace "8" output DisplayPort-0
-workspace "9" output DisplayPort-0
-workspace "10" output DisplayPort-0
-workspace "F1" output DisplayPort-1
-workspace "F2" output DisplayPort-1
-workspace "F3" output DisplayPort-1
-workspace "F4" output DisplayPort-1
-workspace "F5" output DisplayPort-1
-workspace "F6" output DisplayPort-1
-workspace "F7" output DisplayPort-1
-workspace "F8" output DisplayPort-1
-workspace "F9" output DisplayPort-1
-workspace "F10" output DisplayPort-1
+workspace "1" output DisplayPort-1
+workspace "2" output DisplayPort-1
+workspace "3" output DisplayPort-1
+workspace "4" output DisplayPort-1
+workspace "5" output DisplayPort-1
+workspace "6" output DisplayPort-1
+workspace "7" output DisplayPort-1
+workspace "8" output DisplayPort-1
+workspace "9" output DisplayPort-1
+workspace "10" output DisplayPort-1
+workspace "F1" output DisplayPort-0
+workspace "F2" output DisplayPort-0
+workspace "F3" output DisplayPort-0
+workspace "F4" output DisplayPort-0
+workspace "F5" output DisplayPort-0
+workspace "F6" output DisplayPort-0
+workspace "F7" output DisplayPort-0
+workspace "F8" output DisplayPort-0
+workspace "F9" output DisplayPort-0
+workspace "F10" output DisplayPort-0
 
 # Workspace switching
 bindsym $mod+1 workspace $ws1
@@ -142,7 +142,8 @@ for_window [class=".*"] border pixel 2
 
 # Set colour defenitions
 set $color-focused               #3DAEE9
-set $color-focused-window        #505458
+set $color-focused-window               #3DAEE9
+#set $color-focused-window        #505458
 set $color-focused_inactive      #3B4147
 set $color-unfocused             #31363B
 set $color-urgent                #5F696D
@@ -160,6 +161,7 @@ bar {
     i3bar_command i3bar -t
     status_command	i3blocks
     position bottom
+    tray_output none
 
         colors {
                 background         $color-background
@@ -314,4 +316,5 @@ bindsym $mod+g mode $launch
 
 ### STARTUP ###
 exec --no-startup-id picom
+exec --no-startup-id ~/.fehbg
 exec_always --no-startup-id i3-auto-layout
