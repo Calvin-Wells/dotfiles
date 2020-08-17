@@ -2,4 +2,4 @@
 backup/
 nvim/plug/
 nvim/site/
-nvim/site/*
+nvim/site/netrwhist
