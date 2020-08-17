@@ -10,6 +10,11 @@ if [ -d "$HOME/bin" ]; then
 	PATH="$HOME/bin:$PATH"
 fi
 
+# Include cargo's bin in home dir in path if it exists
+if [ -d "$HOME/.cargo/bin" ]; then
+	PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # If running interactively on tty1 then start xorg
 if [[ ! $DISPLAY && XDG_VTNR -eq 1 ]]; then
 	exec startx
