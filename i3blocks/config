@@ -138,10 +138,10 @@ min_width=CPU: 100.00%
 
 # Date Time
 #
-[time]
-command=date '+%a %b %e %l:%M%P '
-interval=5
-separator=true
+#[time]
+#command=date '+%a %b %e %l:%M%P '
+#interval=5
+#separator=true
 
 # OpenVPN support
 #
