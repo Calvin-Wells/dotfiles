@@ -160,7 +160,8 @@ set $text-color-background       #EFF0F1
 bar {
     i3bar_command i3bar -t
     status_command	i3blocks
-    position bottom
+    position top
+    mode hide
     tray_output none
 
         colors {
