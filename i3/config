@@ -142,13 +142,11 @@ font pango: Noto Sans 9
 
 # Set colour defenitions
 set $color-focused               #3DAEE9
-set $color-focused-window               #3DAEE9
-#set $color-focused-window        #505458
 set $color-focused_inactive      #3B4147
 set $color-unfocused             #31363B
 set $color-urgent                #5F696D
 set $color-placeholder           #00FF00
-set $color-background            #31363BDA
+set $color-background            #31363B
 set $text-color-focused          #EFF0F1
 set $text-color-focused_inactive #EFF0F1
 set $text-color-unfocused        #EFF0F1
@@ -158,28 +156,29 @@ set $text-color-background       #EFF0F1
 
 # Start i3bar to display a workspace bar
 bar {
-    i3bar_command i3bar -t
-    status_command	i3blocks
+    i3bar_command i3bar
+    status_command i3blocks
     position top
     mode hide
     tray_output none
+    font pango: Noto Sans 10
 
-        colors {
-                background         $color-background
-                statusline         $text-color-focused
-                separator          $border-color-unfocused
-                                    #border                         background                         text
-                focused_workspace  $color-focused          $color-focused          $text-color-focused
-                active_workspace   $color-focused_inactive $color-focused_inactive $text-color-focused_inactive
-                inactive_workspace $color-background       $color-background       $text-color-unfocused
-                urgent_workspace   $color-urgent           $color-urgent           $text-color-urgent
-                binding_mode       $color-urgent           $color-urgent           $text-color-urgent
-        }
+    colors {
+            background         $color-background
+            statusline         $text-color-focused
+            separator          $border-color-unfocused
+                               #border                 background              text
+            focused_workspace  $color-focused          $color-focused          $text-color-focused
+            active_workspace   $color-focused_inactive $color-focused_inactive $text-color-focused_inactive
+            inactive_workspace $color-background       $color-background       $text-color-unfocused
+            urgent_workspace   $color-urgent           $color-urgent           $text-color-urgent
+            binding_mode       $color-urgent           $color-urgent           $text-color-urgent
+    }
 }
 
 # Window decorations
-#                       border                         background                         text                         indicator
-client.focused          $color-focused-window       $color-focused-window               $text-color-focused          $color-focused
+#                       border                      background                          text                         indicator
+client.focused          $color-focused              $color-focused                      $text-color-focused          $color-focused
 client.focused_inactive $color-focused_inactive     $color-focused_inactive             $text-color-focused_inactive $color-focused
 client.unfocused        $color-unfocused            $color-unfocused                    $text-color-unfocused        $color-focused
 client.urgent           $color-urgent               $color-urgent                       $text-color-urgent           $color-focused
