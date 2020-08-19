@@ -133,6 +133,12 @@ for_window [class="(?i)*nextcloud*"] floating disable
 for_window [class="plasmashell" window_type="notification"] floating enable, border none #, move right 790px, move up 475px;
 no_focus [class="plasmashell" window_type="notification"] 
 
+#Teams stuff
+for_window [title="Microsoft Teams Notification"] floating enable, sticky enable
+no_focus [title="Microsoft Teams Notification"]
+
+#Android Studio
+for_window [title="Android Emulator*"] floating enable
 ### APPEARANCE ###
 # Default font
 font pango: Noto Sans 9
