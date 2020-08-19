@@ -138,7 +138,7 @@ for_window [title="Microsoft Teams Notification"] floating enable, sticky enable
 no_focus [title="Microsoft Teams Notification"]
 
 #Android Studio
-for_window [title="Android Emulator*"] floating enable
+for_window [title="Android Emulator.*"] floating enable
 ### APPEARANCE ###
 # Default font
 font pango: Noto Sans 9
