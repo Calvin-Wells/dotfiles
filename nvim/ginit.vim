@@ -5,5 +5,5 @@ if exists('g:GuiLoaded')
     " set a nice colour scheme
     let g:one_allow_italics=1
     colorscheme one
+    set background=light
 endif
-
